@@ -3,7 +3,8 @@
 
 
 ## Integrantes 
-- Esteban Marcelo Quiroz  
+- Fernandez, Jonathan
+- 
 
 
 ## Proyecto: Contador binario.
