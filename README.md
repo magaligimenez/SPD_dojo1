@@ -14,7 +14,7 @@
 7- Durante el rojo: Tiene que sonar 2 vez por segundo en un tono FUERTE. 
 
 ## Función principal:
-## definicion de los leds y buzzer
+- Definicion de los leds y buzzer
 #define LEDROJO1 2
 #define LEDROJO2 3
 #define LEDAMARILLO1 4
@@ -23,10 +23,10 @@
 #define LEDVERDE2 7
 #define PIEZO1 11
 
-## definicion de tiempos
+- Definicion de tiempos
 const int TIEMPO_VERDE = 5000;
 const int TIEMPO_AMARILLO = 3000;
-const int TIEMPO_ROJO = 5000;
+const int TIEMPO_ROJO = 10000;
 const int PIEZO_ENCENDER = 500;
 const int PIEZO_APAGAR = 500;
 
@@ -64,10 +64,10 @@ void apagarLed(int pin, int pin2, int tiempo) {
 //Activar el buzzer en determinado momento
 void activarPiezo(int tiempo) {
   for (int i = 0; i < tiempo; i += PIEZO_ENCENDER + PIEZO_APAGAR){
-  digitalWrite(PIEZO1, HIGH);
-  delay(PIEZO_ENCENDER);
-  digitalWrite(PIEZO1, LOW);
-  delay(PIEZO_APAGAR);
+    tone(PIEZO1,1000);
+    delay(PIEZO_APAGAR / 2);
+    noTone(PIEZO1);
+    delay(PIEZO_APAGAR / 2);
   }
 }
 
